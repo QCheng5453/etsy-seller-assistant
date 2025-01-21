@@ -1,0 +1,15 @@
+{
+  "name": "etsy-seller-assistant",
+  "version": "1.0.0",
+  "description": "AI-powered message assistant for Etsy sellers",
+  "main": "background.js",
+  "scripts": {
+    "generate-icons": "node generate_icons.js",
+    "build": "zip -r etsy-seller-assistant.zip manifest.json popup.html popup.js content.js background.js images/"
+  },
+  "author": "Leafecho",
+  "license": "MIT",
+  "dependencies": {
+    "canvas": "^2.11.2"
+  }
+}

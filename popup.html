@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Etsy Seller Message Assistant</title>
+    <style>
+        body {
+            width: 350px;
+            padding: 16px;
+            font-family: "Graphik Webfont", -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Segoe UI", "Helvetica", Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .header img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .header h2 {
+            margin: 0;
+            color: #222;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .section {
+            background: #fafafa;
+            border: 1px solid #e8e8e8;
+            border-radius: 6px;
+            padding: 12px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: #222;
+            margin-bottom: 8px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-size: 13px;
+            color: #595959;
+        }
+
+        input,
+        select {
+            padding: 8px 12px;
+            border: 1px solid #e1e1e1;
+            border-radius: 6px;
+            font-size: 14px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #222;
+        }
+
+        .api-key-input {
+            position: relative;
+        }
+
+        .toggle-visibility {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #595959;
+        }
+
+        button {
+            background: #222;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 24px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background: #444;
+        }
+
+        button:disabled {
+            background: #e1e1e1;
+            cursor: not-allowed;
+        }
+
+        .status {
+            font-size: 13px;
+            color: #595959;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .success {
+            color: #2d8c1e;
+        }
+
+        .error {
+            color: #c71810;
+        }
+
+        select[name="provider"] {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="images/icon48.png" alt="Logo">
+            <h2>Etsy Message Assistant</h2>
+        </div>
+
+        <div class="section">
+            <div class="section-title">AI Provider Settings</div>
+            <div class="input-group">
+                <label for="provider">Select AI Provider</label>
+                <select id="provider" name="provider">
+                    <option value="openai">OpenAI</option>
+                    <option value="anthropic">Anthropic (Claude)</option>
+                    <option value="deepseek">DeepSeek</option>
+                </select>
+
+                <label for="model">Select Model</label>
+                <select id="model" name="model">
+                    <!-- Models will be populated by JavaScript -->
+                </select>
+
+                <label for="api-key">API Key</label>
+                <div class="api-key-input">
+                    <input type="password" id="api-key" placeholder="Enter your API key">
+                </div>
+            </div>
+        </div>
+
+        <button id="save-settings" type="button">Save Settings</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
