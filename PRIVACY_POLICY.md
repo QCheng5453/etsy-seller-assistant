@@ -1,6 +1,6 @@
 # Privacy Policy for Etsy Seller Message Assistant
 
-*Last updated: January 2024*
+*Last updated: January 2025*
 
 ## Introduction
 
@@ -84,8 +84,7 @@ We may update this Privacy Policy from time to time. We will notify users of any
 ## Contact Information
 
 For any questions or concerns about this privacy policy, please contact:
-- Email: [Your Contact Email]
-- GitHub Issues: [Repository Issues Page]
+- Email: qcheng5453@gmail.com
 
 ## Compliance
 
@@ -97,4 +96,4 @@ This extension complies with:
 ## Open Source
 
 This extension is open source. You can review the code at:
-[GitHub Repository URL] 
+[[GitHub Repository URL] ](https://github.com/QCheng5453/etsy-seller-assistant)
